@@ -1,0 +1,34 @@
+### Create a new task
+POST http://localhost:3000/task
+Content-Type: application/json
+
+{
+    "title": "Task 1",
+    "description": "Description of Task 1",
+    "dueDate": "2024-03-30",
+    "assignedTo": "Anoop",
+    "category": "Work"
+}
+
+### Retrieve a task by ID
+GET http://localhost:3000/task/1
+
+### Update a task
+PUT http://localhost:3000/task/1
+Content-Type: application/json
+
+{
+    "status": "Completed"
+}
+
+### Delete a task
+DELETE http://localhost:3000/task/1
+
+### Retrieve all tasks
+GET http://localhost:3000/task
+
+### Retrieve tasks assigned to a specific user
+GET http://localhost:3000/task/assigned/anoop
+
+### Retrieve tasks under a specific category
+GET http://localhost:3000/task/category/work
